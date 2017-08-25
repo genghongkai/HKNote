@@ -1,9 +1,10 @@
 ## github 从本地仓库上传项目到远程仓库命令行
 
 1. Command line instructions(命令指令行)
-Git global setup(先设置git全局设置)    #如果以前设置过则可以忽略
++[Git global setup(先设置git全局设置)    #如果以前设置过则可以忽略
 git config --global user.name "张三"   #设置git用户名
-git config --global user.email "collinswang@21cn.com"    #设置git用户邮箱
+git config --global user.email "collinswang@21cn.com"    #设置git用户邮箱]
+
 
 # 方法一:(从零开始新建本地仓库,将远程文件clone下来)
 Create a new repository     #本地新建仓库
