@@ -6,20 +6,44 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ### the methods that pushing my product by git
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
 ```markdown
 Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+1. Command line instructions(命令指令行)
+Git global setup(先设置git全局设置)    #如果以前设置过则可以忽略
+git config --global user.name "张三"   #设置git用户名
+git config --global user.email "collinswang@21cn.com"    #设置git用户邮箱
 
-- Bulleted
-- List
+# 方法一:(从零开始新建本地仓库,将远程文件clone下来)
+Create a new repository     #本地新建仓库
 
-1. Numbered
-2. List
+git clone git@192.168.2.250:collins/front.git  #将远程git仓库文件clone至本地新建仓库
+cd front                                    #切换至新建的分支
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+# 方法二:
+Existing folder     #已经存在文件夹(此目录之前未建立过远程git仓库连接)
+
+cd existing_folder     #切到已存在的目录下
+git init                      #初始化git
+git remote add origin git@192.168.2.250:collins/front.git     #建立远成仓库连接
+git add .                  #添加文件
+git commit              #提交
+git push -u origin master    #push到远程仓库
+
+# 方法三:
+Git repository    #已经存在的git仓库分支
+
+cd existing_repository_folder     #切到已存在的git分支的目录下
+rm -rf .git                          #删除该分支之前的git配置
+git init                            #初始化git
+git remote add origin git@192.168.2.250:collins/front.git     #建立新的远成仓库连接
+git add .                  #添加文件
+git commit              #提交
+git push -u origin master    #push到远程仓库
+
 
 **Bold** and _Italic_ and `Code` text
 
