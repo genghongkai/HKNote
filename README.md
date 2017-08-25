@@ -1,13 +1,4 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/genghongkai/HKNote/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### the methods that pushing my product by git
-
-```markdown
-Syntax highlighted code block
+## github 从本地仓库上传项目到远程仓库命令行
 
 1. Command line instructions(命令指令行)
 Git global setup(先设置git全局设置)    #如果以前设置过则可以忽略
@@ -44,18 +35,14 @@ git add .                  #添加文件
 git commit              #提交
 git push -u origin master    #push到远程仓库
 
+### 提交时错误总结
+1.$ git remote add origin git@github.com:WadeLeng/hello-world.git 
+错误提示：fatal: remote origin already exists.   //远程仓库已经存在
+解决办法：$ git remote rm origin   //移除远程仓库
+然后在执行：$ git remote add origin git@github.com:WadeLeng/hello-world.git 就不会报错误了 
+2. $ git push origin master   //提交
+错误提示：error:failed to push som refs to 
+解决办法：$ git pull origin master //先把远程服务器github上面的文件拉先来，再push 上去。 
+3.强制提交提交
+解决办法: $ git push -u origin master -f 
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/genghongkai/HKNote/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
