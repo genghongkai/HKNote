@@ -8,7 +8,7 @@ git config --global user.email "collinswang@21cn.com"    #设置git用户邮箱
 # 方法一:(从零开始新建本地仓库,将远程文件clone下来)
 Create a new repository     #本地新建仓库
 
-git clone git@github.com/genghongkai/HKNote.git  #将远程git仓库文件clone至本地新建仓库
+git clone https://github.com/genghongkai/HKNote.git  #将远程git仓库文件clone至本地新建仓库
 cd front                                    #切换至新建的分支
 touch README.md
 git add README.md
